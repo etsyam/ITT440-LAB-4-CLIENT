@@ -2,6 +2,7 @@
 #include<sys/socket.h>
 #include<arpa/inet.h>	//inet_addr
 #include <string.h>
+#include <unistd.h>
 
 int main(int argc , char *argv[])
 {
@@ -44,7 +45,7 @@ int main(int argc , char *argv[])
 	}
 	puts("Reply received\n");
 	puts(server_reply);
-
+	close(socket_desc);
 	return 0;
 }
 
